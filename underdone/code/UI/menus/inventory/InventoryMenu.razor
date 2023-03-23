@@ -1,0 +1,65 @@
+﻿@using System;
+@using System.Collections.Generic;
+@using Sandbox;
+@using Sandbox.UI;
+@namespace Underdone
+@attribute [StyleSheet("UI/general.css")]
+
+<style>
+    .inventory-container{
+        display: flex; /* or inline-flex */
+        flex-direction: column;
+        overflow:scroll;
+    }
+
+    .inventory-body{
+        display: flex; /* or inline-flex */
+        flex-direction: row;
+        flex-wrap:wrap;
+        justify-content:space-between;
+        margin-top:5px;
+        flex-shrink: 0;
+    }
+
+    .inventory-slot{
+        background-color:black;
+        height:48px;
+        width: 48px;
+        margin:1px;
+        border-radius:4px;
+        flex-shrink: 0;
+        font-size:12px;
+    }
+</style>
+
+@code{
+    Item weapon_Sword = new Item("Sword","image string",25);
+    Item weapon_Axe = new Item("Axe","image string",25);
+    Item weapon_Katana = new Item("Katana", "image string", 25);
+    Item weapon_Longbow = new Item("Longbow","image string",25);
+    Item weapon_Shortbow = new Item("Shortbow", "image string", 25);
+    Item food_Apple = new Item("Apple", "image string", 25);
+    Item food_Grape = new Item("Grape", "image string", 25);
+    Item food_Orange = new Item("Orange", "image string", 25);
+    Item food_Banana = new Item("Banana", "image string", 25);
+    Item food_Steak = new Item("Steak", "image string", 25);
+    Item food_Glizzy = new Item("Glizzy", "image string", 25);
+
+    List<Item> items = new List<Item>();
+
+}
+
+<root>
+    <div class="card">
+        <div class="card-header">
+            Inventory
+        </div>
+
+        <div class="inventory-container">
+            <div class="inventory-body">
+                <InventorySlot Item="@weapon_Sword" />
+            </div>
+        </div>
+    </div>
+</root>
+

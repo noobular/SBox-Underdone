@@ -1,0 +1,59 @@
+
+.card {
+    display: flex; /* or inline-flex */
+    flex-direction: column;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border: black;
+    padding: 20px;
+    font-size: 18px;
+    font-family: Roboto;
+    max-width: 350px;
+    max-height: 50%;
+}
+
+.card-header {
+    font-size: 32px;
+    border-bottom: 2px;
+    border-color: black;
+    font-weight: bold;
+    font-style: italic;
+    flex-shrink: 0;
+}
+
+.card-body {
+    padding: 5px;
+}
+
+
+.quest-container {
+    display: flex; /* or inline-flex */
+    flex-direction: column;
+    overflow: scroll;
+
+}
+
+.quest-body {
+    display: flex; /* or inline-flex */
+    flex-direction: column;
+    font-family: Roboto;
+    padding: 5px;
+    min-height: 0px;
+    flex-shrink: 0;
+}
+
+.quest-name {
+    display: flex; /* or inline-flex */
+    flex-direction: row;
+    justify-content:space-between;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.quest-description{
+    padding: 5px;
+}
+
+.quest-objective{
+    font-weight:bold;
+}

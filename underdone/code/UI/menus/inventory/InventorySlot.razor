@@ -1,0 +1,18 @@
+﻿@using System;
+@using Sandbox;
+@using Sandbox.UI;
+@attribute [StyleSheet("/UI/general.css")]
+@namespace Underdone
+
+<style>
+    .inventory-slot{
+        color:white;
+    }
+</style>
+
+<root class="inventory-slot" @onmousedown=@( () => Log.Info("[OnMouseDown] " + Item.name))> @Item.name </root>
+
+@code{
+    public Item Item { get; set; }  
+    // @onmousedown=@( () => Log.Info("[OnMouseDown] " + ImportedItem.name))
+}
